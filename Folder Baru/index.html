@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Kata Berlevel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="level-selection">
+        <h1>Pilih Mode Permainan</h1>
+        <button id="easy-btn" onclick="startGame('ID')">
+            Bahasa Indonesia
+        </button>
+        <button id="hard-btn" onclick="startGame('EN')">
+           English
+        </button>
+        <div id="theme-toggle-home" style="margin-top: 20px;">
+            <button onclick="toggleTheme()">☀️Tema🌙</button>
+        </div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        
+        <div id="top-bar">
+            <button id="home-btn" onclick="goToHome()">
+                Menu
+            </button>
+            <button id="theme-btn" onclick="toggleTheme()">
+                🌙 Tema
+            </button>
+        </div>
+        
+        <h1>Tebak Kata</h1> 
+
+        <div id="score-info">
+            </div>
+
+        <div id="grid-container">
+            <div id="grid">
+                </div>
+        </div>
+        
+        <div id="game-modal" class="hidden">
+            <div class="modal-content">
+                <h2 id="modal-title"></h2>
+                <p id="modal-message"></p>
+                <div class="modal-actions">
+                    <button id="restart-btn" onclick="initializeGame()">
+                        Mulai Ulang
+                    </button>
+                    <button id="menu-btn" onclick="goToHome()">
+                        Kembali ke Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="keyboard">
+            </div>
+        
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
